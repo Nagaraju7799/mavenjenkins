@@ -3,39 +3,13 @@ pipeline
     agent any
 
     stages 
-    {
-        stage('Build') 
-        {
+	{
+        stage('hello') 
+		{
             steps 
-            {
-                echo 'Build App'
+			{
+                echo 'hello world'
             }
         }
-
-        stage('Test') 
-        {
-            steps 
-            {
-                echo 'Test App'
-            }
-        }
-
-        stage('Deploy') 
-        {
-            steps 
-            {
-                echo 'Deploy App'
-            }
-        }
-    }
-
-    post
-    {
-
-    	always
-    	{
-    		emailext body: 'Summary', subject: 'Pipeline Status', to: 'nagarajujogu7799@gmail.com'
-    	}
-
     }
 }
